@@ -24,13 +24,19 @@ public class Application {
                 // get string without " "
                 String substring = str.substring(1, str.length() - 1);
                 // change to integer
-                String[] split = substring.split(":|,");
-                System.out.println("split = " + Arrays.toString(split));
-                for (String s : split) {
-                    int s1 = Integer.parseInt(s);
-                    result +=s1;
+                if (){
+                    // check for what is between // and \n
                 }
-                System.out.println("result : "+ result);
+                else    {
+                    String[] split = substring.split(":|,");
+                    System.out.println("split = " + Arrays.toString(split));
+                    for (String s : split) {
+                        int s1 = Integer.parseInt(s);
+                        result +=s1;
+                    }
+                    System.out.println("result : "+ result);
+                }
+
             }
             else throw new IllegalStateException("IllegalStateException : write a wrong input");
         }
@@ -38,11 +44,6 @@ public class Application {
         catch (IllegalStateException e){
             System.out.println(e.getMessage());
         }
-
-
-
-
-
 
     }
 }
