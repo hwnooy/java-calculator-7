@@ -26,12 +26,14 @@ public class Application {
                 // change to integer
                 if (str.charAt(1)=='/' && str.charAt(2)=='/'){
                     System.out.println("test for special pivot");
-                    System.out.println("index of  target : " +  str.indexOf("\\n"));  // \r\n(x) ascii 10(X)
+                    System.out.println("index of LF : " +  str.indexOf("\\n"));  // \r\n(x) ascii 10(X)
 
                     String pivot = str.substring(3, str.indexOf("\\n"));
                     System.out.println("pivot is "+pivot);
-                    System.out.println(str.indexOf("\\n"));
+                    System.out.println("print index of LF is " + str.indexOf("\\n"));
+                    System.out.println("retry print of LF is " + str.indexOf("\\n")+1);
                     System.out.println(str.charAt(str.indexOf("\\n")));
+                    System.out.println(str.charAt(str.indexOf("\\n")+1));
                     // after \n
                     System.out.println("print target");
                     String target = str.substring((str.indexOf("\\n")+2), str.length()-1); // is \n not a single char??
@@ -60,7 +62,7 @@ public class Application {
             }
             else throw new IllegalStateException("IllegalStateException : write a wrong input");
         }
-        // if format is wrong sout IllegalArgumentException
+        // if format is wrong print IllegalArgumentException
         catch (IllegalStateException e){
             System.out.println(e.getMessage());
         }
